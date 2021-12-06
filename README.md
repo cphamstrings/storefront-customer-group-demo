@@ -4,24 +4,41 @@ The goal of this demonstration is to provide an outline on how to filter product
 
 During the development of this solution, we wished to address the two concerns of scalability and performance. In order to accommodate for an increase in catalog size, we aimed to keep the amount of network requests to a minimum to ensure site speed remains high. As we will see later, this is accomplished by specifying the product IDs we wish to retrieve within our GraphQL query.
 
-</br>
 
-The source code for the demo can be found at: https://www.djawidjawijdaw.com  
+
+# Installation
+
+The source code for the demo can be found at: https://github.com/cphamstrings/storefront_graphql_example
 A live example can be viewed at: https://spseprojectstore.mybigcommerce.com
 
 </br>
+To test this, start by logging into a customer account and navigating to the "Shop" category page.
 
-To test this, you may use the following customer account credentials:
+You may use the following customer account credentials to login:
+
 ```
-Username: customer1
+Username: customer1@bctest.com
 Password: asdfasdf1234
 
-Username: customer2
+Username: customer2@bctest.com
 Password: asdfasdf1234
 
-Username: customer3
+Username: customer3@bctest.com
 Password: asdfasdf1234
 ```
+
+</br>
+
+If you are wishing to use this example on your own store, please install the file as a custom template page. References for the Stencil-CLI and apply custom template files can be found here:
+
+https://developer.bigcommerce.com/stencil-docs/installing-stencil-cli/installing-stencil
+https://developer.bigcommerce.com/stencil-docs/storefront-customization/custom-templates
+
+</br>
+
+Please note that this example will not work from a local stencil preview due to the storefront handlebars expression used to authenticate the GraphQL request.
+
+
 # Retrieve Customer Group and Formulate Query
 
 To begin, we will declare variables to store data needed for our query:
@@ -82,7 +99,7 @@ fetch(graphQLUrl, {
 ```
 </br>
 
-From there, the individual product attributes may be obtained and rendered onto DOM elements using your frontend language of choice. For our example, we had used JavaScript to declare a function that populates DOM elements into product cards.
+From there, the individual product attributes may be obtained and rendered onto DOM elements using your frontend language of choice. For our example, we had used JavaScript to declare a function that populates DOM elements. While our example uses JavaScript, any front end scripting language would be acceptable.
 
 ```
 function renderProduct(product, addToCartURLFormat) {
@@ -99,6 +116,8 @@ function renderProduct(product, addToCartURLFormat) {
               </div>`
         }
 ```
+
+
 
 # Conclusion
 
