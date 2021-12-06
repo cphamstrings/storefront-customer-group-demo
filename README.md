@@ -8,7 +8,7 @@ During the development of this solution, we wished to address the two concerns o
 
 # Installation
 
-The source code for the demo can be found at: https://github.com/cphamstrings/storefront_graphql_example
+The source code for the demo can be found at: https://github.com/cphamstrings/storefront-customer-group-demo
 A live example can be viewed at: https://spseprojectstore.mybigcommerce.com
 
 </br>
